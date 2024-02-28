@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+    }
+    .header{
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(46, 30, 30, 0.7),rgba(69,30,30,0.7)),url(https://cdn.pixabay.com/photo/2017/08/06/22/01/books-2596809_640.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        padding: 10px 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav img{
+        width: 150px;
+    }
+    nav ul{
+        list-style: none;
+        width: 100%;
+        text-align: right;
+        padding-right: 60px;
+    }
+    nav ul li{
+        display: inline-block;
+        margin: 10px 20px;
+    }
+    nav ul li a{
+        color: white;
+        text-decoration: none ;
+    }
+    nav ul li::after{
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #c47960;
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+    nav ul li:hover::after{
+        width: 100%;
+    }
+    .text-box{
+        width: 90%;
+        color: rgb(220, 204, 204);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center; 
+    }
+    .text-box h1{
+        font-size: 62px;
+        font-family: 'Lora', serif;
+    }
+    .text-box p{
+        margin: 12px 0 50px;
+        font-size: 18px;
+        color: white;
+    }
+    .hero-btn{
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        border: 1px solid white;
+        padding: 12px 34px;
+        font-size: 13px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+    
+    }
+    .hero-btn:hover{
+        border: 1px solid #c47960;
+        background: #c47960;
+        transition: 1s;
+    }
+    /*----- course  -----*/
+    
+    .intro{
+        width: 95%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+        flex-basis: 31%;
+        background: #f1e7dd;
+        border-radius: 10px;
+        margin: 2% 2%;
+        padding: 90px 50px;
+        box-sizing: border-box;
+    }
+    .mid h1{
+        font-size: 35px;
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+    }
+    .intro p{
+        color: rgb(42, 35, 35);
+        font-size: 20px;
+        line-height: 34px;
+        padding: 10px;
+        text-align: center;
+    }
+    .aca-col{
+        color: rgb(42, 35, 35);
+        font-size: 17px;
+        line-height: 34px;
+        padding: 10px;
+        text-align: center;
+        flex-basis: 31%;
+        background: #f6dccd;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 8px;
+        box-sizing: border-box;
+    }
+    .aca{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+        width: 94%;
+        padding: 2px 36px;
+    }
+    h3{
+        text-align: center;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    .aca-col:hover{
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+    }
+    .pro-col1{
+        color: rgb(42, 35, 35);
+        font-size: 17px;
+        line-height: 34px;
+        padding: 10px;
+        text-align: center;
+        flex-basis: 31%;
+        background: #f6dccd;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 8px;
+        box-sizing: border-box;
+        position: relative;
+        left: 180px;
+    }
+    .pro-col2{
+        color: rgb(42, 35, 35);
+        font-size: 17px;
+        line-height: 34px;
+        padding: 10px;
+        text-align: center;
+        flex-basis: 31%;
+        background: #f6dccd;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 8px;
+        box-sizing: border-box;
+        position: relative;
+        right: 180px;
+    }
+    .row{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+        width: 94%;
+        padding: 2px 36px;
+    }
+    .edu{
+        width: 95%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+        flex-basis: 31%;
+        background: #f1e7dd;
+        border-radius: 10px;
+        margin: 2% 2%;
+        padding: 90px 50px;
+        box-sizing: border-box;
+    }
+    .int{
+        font-size: 18px;
+        width: 95%;
+        margin: auto;
+        padding-top: 100px;
+        flex-basis: 31%;
+        background: #f1e7dd;
+        border-radius: 10px;
+        margin: 2% 2%;
+        padding: 90px 50px;
+        box-sizing: border-box;
+    }
+    .int1{
+        position: relative;
+        left: 400px
+    }
+    .int h1{
+        text-align: center;
+        font-size: 25px;
+    }
+    .con{
+        margin-top: 5%;
+        display: flex;
+        justify-content: space-between;
+        width: 94%;
+        padding: 2px 36px;
+    }
+    .info{
+        width: 95%;
+        margin: auto;
+        text-align: center;
+        padding-top: 100px;
+        flex-basis: 31%;
+        background: #f1e7dd;
+        border-radius: 10px;
+        margin: 2% 2%;
+        padding: 30px 0px;
+        box-sizing: border-box;
+    }
+    .email{
+        color: rgb(42, 35, 35);
+        font-size: 17px;
+        line-height: 34px;
+        padding: 10px;
+        text-align: center;
+        flex-basis: 31%;
+        background: #f6dccd;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 8px;
+        box-sizing: border-box;
+        position: relative;
+    
+    }
+    .phone{
+        color: rgb(42, 35, 35);
+        font-size: 17px;
+        line-height: 34px;
+        padding: 10px;
+        text-align: center;
+        flex-basis: 31%;
+        background: #f6dccd;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 8px;
+        box-sizing: border-box;
+        position: relative;
+        
+    }
+    .insta{
+        color: rgb(42, 35, 35);
+        font-size: 17px;
+        line-height: 34px;
+        padding: 10px;
+        text-align: center;
+        flex-basis: 31%;
+        background: #f6dccd;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        padding: 20px 8px;
+        box-sizing: border-box;
+        position: relative;
+        
+    }
+</style>
+    <section class="header">
+        <nav>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">ACADEMICS</a></li>
+                <li><a href="">INTERESTS</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </nav> 
+        <div class="text-box">
+            <h1>RISHA PALADUGU</h1>
+            <p>A BTech student specializing in Computer Science at VIT Vellore.</p>
+            <a href="" class="hero-btn">Visit us to know more</a>
+        </div>
+    </section>
+    <br>
+    <section class="intro">
+        <h1>INTRODUCTION</h1>
+        <br>
+        <p>Hello! I'm Risha, currently in my 2nd year of BTech, specializing in Computer Science at VIT Vellore. Hailing from the vibrant city of Vijayawada, Andhra Pradesh, this webpage offers a glimpse into my exploration of  CSS and the coding journey.</p>
+    </section>
+    <br>
+    <br>
+    <section class="edu">
+        <h1>EDUCATION</h1>
+        <section class="aca">
+        <div class="aca-col">
+            <h3>PRIMARY EDUCATION</h3>
+            <p>I began my educational journey at Gowtham Concept School in Gudivada, where I laid the foundation for my academic pursuits.</p>
+        </div>
+        <div class="aca-col">
+                <h3>HIGH SCHOOL</h3>
+                <p>I began my educational journey at Gowrham Concept School in Gudivada, where I laid the foundation for my academic pursuits.</p>
+        </div>
+        <div class="aca-col">
+            <h3>UNDERGRADUATION</h3>
+            <p>Currently, I am pursuing a Bachelor's degree in Computer Science at VIT Vellore, embarking on a fulfilling journey in higher education.</p>
+        </div>
+        </section>
+        <h1>PROJECTS</h1>
+        <section class="projects">
+            <div class ="row">
+                <div class="pro-col1">
+                    <p>Conceived and pitched an app idea for the college’s technical fest, which was successfully accepted.Collaborated with a team of four to develop the UI/UX front-end focusing on enhancing event information successfully</p>
+                    <br>
+                    <div class="im1"><img src="https://www.vandelaydesign.com/wp-content/uploads/sketch-1.jpg" height="200vw" width="350vh"/></div>
+                </div>
+                <div class="pro-col2">
+                    <p>Enthusiastically contributing to the vibrant cultural event 'Riviera' in the management domain, embracing the opportunity to showcase my passion and dedication.</p>
+                    <br>
+                <div class="im2"><img src="https://www.fashionlady.in/wp-content/uploads/2017/01/riviera-vit-2017.jpg" height="200vw" width="350vh"/></div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <br>
+    <br>
+    <section class="int">
+        <h1>INTERESTS</h1>
+        <br>
+        <section class="int1">
+            <ol>
+                <li>Coding : C, C++, JAVA, PYTHON, UI UX Design, HTML, CSS</li>
+                <li>Sports : Tennis, badminton</li>
+                <li>Languages : Telugu, English, Spanish[Beginner Level]</li>
+                <li>Books : Looking for Alaska, Meluha</li>
+            </ol>
+        </section>
+    </section>
+    <br>
+    <br>
+    <section class="info">
+        <br>
+        <h1>CONTACT INFORMATION</h1>
+    <section class="con">
+        <section class="email">
+            <p>email address :</p>
+            <p>rishapaladugu@gmail.com</p>
+        </section>
+        <section class="phone">
+            <p>phone no :</p>
+            <p>9866917555</p>
+        </section>
+        <section class="insta">
+            <p>instagram id :</p>
+            <p>rishapaladugu@gmail.com</p>
+        </section>
+    </section>
+</section>
+</section>
+</body>
+</html>
