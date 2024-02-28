@@ -84,7 +84,7 @@ section {
 .controls {
   position: fixed;
   z-index: 10;
-  top: 50%;
+  top: 60%;
   right: 3%;
   display: flex;
   flex-direction: column;
@@ -120,8 +120,8 @@ section {
 .theme-btn {
   top: 5%;
   right: 3%;
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   background-color: var(--color-grey-4);
   cursor: pointer;
@@ -670,3 +670,5 @@ section {
 .about-container .left-about p {
   padding-left: 0;
 }
+
+
